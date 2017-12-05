@@ -55,16 +55,6 @@
             <artifactId>cucumber-java8</artifactId>
             <version>1.2.5</version>
         </dependency>
-        <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-            <version>1</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>RELEASE</version>
-        </dependency>
 
     </dependencies>
 

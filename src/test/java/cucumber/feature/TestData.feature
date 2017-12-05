@@ -1,7 +1,7 @@
 Feature: As a user I want to be able to log in into the instagram web site
 
   Scenario Outline: Sign in user
-    Given the user is on landing page
+    Given user is on home page
     When user navigates to the sign in page
     And user provides the login as <login>
     And user provides the password as <password>

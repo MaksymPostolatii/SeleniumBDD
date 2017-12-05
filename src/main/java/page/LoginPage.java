@@ -10,7 +10,7 @@ public class LoginPage extends AbstractPage {
     private InputElement userName;
     @FindBy(xpath = "//input[@name='password']")
     private InputElement userPassword;
-    @FindBy(xpath = "//button[contains(text(),'Увійти')]")
+    @FindBy(xpath = "//button[contains(text(),'Log in')]")
     private ButtonElement logIn;
 
     public void enterLogin(String username) {

@@ -10,4 +10,8 @@ public class HomePageBO {
         homePage.navigateToLogIn();
     }
 
+    public String getCurrentURL() {
+        return homePage.getCurrentURL();
+    }
+
 }

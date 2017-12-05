@@ -10,7 +10,7 @@ import static java.lang.ThreadLocal.withInitial;
 
 public class DriverManager {
 
-    private static ThreadLocal<WebDriver> driver = withInitial(() -> {
+    private static ThreadLocal<ChromeDriver> driver = withInitial(() -> {
         setProperty(DRIVER, DRIVER_PATH);
         return new ChromeDriver();
     });
