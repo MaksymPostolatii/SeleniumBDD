@@ -11,6 +11,10 @@ public class HomePage extends AbstractPage {
         logIn.click();
     }
 
+    public Boolean isLogInButtonDisplayed() {
+        return logIn.isDisplayed();
+    }
+
     public String getCurrentURL() {
         return driver.getCurrentUrl();
     }

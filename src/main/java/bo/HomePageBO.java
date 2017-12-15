@@ -14,4 +14,8 @@ public class HomePageBO {
         return homePage.getCurrentURL();
     }
 
+    public Boolean isLogInButtonDisplayed() {
+        return homePage.isLogInButtonDisplayed();
+    }
+
 }

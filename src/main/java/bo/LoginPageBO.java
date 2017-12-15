@@ -17,4 +17,12 @@ public class LoginPageBO {
     public void clickLogIn() {
         loginPage.clickLogIn();
     }
+
+    public void loadPage(String URL) {
+        loginPage.loadPage(URL);
+    }
+
+    public void waitForUrl(String URL) {
+        loginPage.waitForUrl(URL);
+    }
 }

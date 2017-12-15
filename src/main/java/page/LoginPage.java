@@ -3,6 +3,9 @@ package page;
 import element.ButtonElement;
 import element.InputElement;
 import org.openqa.selenium.support.FindBy;
+import util.FluentWaitElement;
+
+import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends AbstractPage {
 
@@ -25,4 +28,11 @@ public class LoginPage extends AbstractPage {
         logIn.click();
     }
 
+    public void loadPage(String URL) {
+        driver.get(URL);
+    }
+
+    public void waitForUrl(String URL) {
+        FluentWaitElement.waitForUrl(driver, URL);
+    }
 }

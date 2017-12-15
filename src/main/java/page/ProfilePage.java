@@ -5,10 +5,11 @@ import org.openqa.selenium.support.FindBy;
 
 public class ProfilePage extends AbstractPage {
 
-    @FindBy(xpath = "//a[contains(text(),'Profile')]")
-    private ButtonElement profile;
+    @FindBy(xpath = "//button[contains(text(),'Options')]")
+    private ButtonElement options;
 
-    public Boolean isProfileButtonDisplayed() {
-        return profile.isDisplayed();
+    public void openOptions() {
+        options.click();
     }
+
 }

@@ -4,10 +4,10 @@ import page.ProfilePage;
 
 public class ProfilePageBO {
 
-    ProfilePage profilePage = new ProfilePage();
+    private ProfilePage profilePage = new ProfilePage();
 
-    public Boolean isProfileButtonDisplayed() {
-        return profilePage.isProfileButtonDisplayed();
+    public void openOptions() {
+        profilePage.openOptions();
     }
 
 }
