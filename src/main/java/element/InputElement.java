@@ -1,5 +1,6 @@
 package element;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 public class InputElement extends AbstractElement {
@@ -14,5 +15,9 @@ public class InputElement extends AbstractElement {
 
     public String getText() {
         return webElement.getText();
+    }
+
+    public void sendKeys(Keys keys) {
+        webElement.sendKeys(keys);
     }
 }

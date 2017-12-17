@@ -64,7 +64,7 @@ public class LogInTest {
     @Then("^user should be logged in to the web site$")
     public void verifyLoggedIn() {
         Assert.assertTrue(userHomePageBO.isProfileButtonDisplayed());
-      //  userHomePageBO.enterUserSearchName("zbsk.citizen");
+      //  userHomePageBO.enterUserNameForSearch("zbsk.citizen");
     }
 
 }

@@ -13,7 +13,7 @@ public class FluentWaitElement {
 
     public static void waitForUrl(WebDriver driver, String URL) {
         Wait wait = new FluentWait(driver).withTimeout(10, SECONDS).pollingEvery(3, MILLISECONDS);
-        wait.until(ExpectedConditions.urlToBe(URL));
+        wait.until(ExpectedConditions.urlContains(URL));
     }
 
     public static void waitClickableElement(WebElement webElement, WebDriver driver) {

@@ -14,8 +14,11 @@ public class UserHomePageBO {
         userHomePage.openProfile();
     }
 
-    public void enterUserSearchName(String userSearchName) {
-        userHomePage.enterUserSearchName(userSearchName);
+    public void enterUserNameForSearch(String userSearchName) {
+        userHomePage.enterUserNameForSearch(userSearchName);
     }
 
+    public void openFriendPage(String urlPart) {
+        userHomePage.openFriendPage(urlPart);
+    }
 }
