@@ -10,7 +10,7 @@ import static java.lang.ThreadLocal.withInitial;
 
 public class DriverManager {
 
-    private static ThreadLocal<ChromeDriver> driver = withInitial(() -> {
+    private static final ThreadLocal<ChromeDriver> CHROME_DRIVER_THREAD_LOCAL = withInitial(() -> {
         setProperty(DRIVER, DRIVER_PATH);
         return new ChromeDriver();
     });
@@ -18,12 +18,12 @@ public class DriverManager {
     private DriverManager() {
     }
 
-    public static WebDriver getDriver() {
-        return driver.get();
+    public static WebDriver getChromeDriverThreadLocal() {
+        return CHROME_DRIVER_THREAD_LOCAL.get();
     }
 
     public static void removeDriver() {
-        driver.get().quit();
-        driver.remove();
+        CHROME_DRIVER_THREAD_LOCAL.get().quit();
+        CHROME_DRIVER_THREAD_LOCAL.remove();
     }
 }

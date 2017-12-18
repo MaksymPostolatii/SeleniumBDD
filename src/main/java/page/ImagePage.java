@@ -1,16 +1,18 @@
 package page;
 
-import cucumber.deps.com.thoughtworks.xstream.io.xml.BEAStaxDriver;
 import element.ButtonElement;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 public class ImagePage extends AbstractPage {
 
-    @FindBy(xpath = "//span[contains(text(),'Like') or contains(text(), 'Unlike')]")
+    @FindBy(xpath = "//span[contains(@class,'Heart')]")
     private ButtonElement like;
 
-    @FindBy(xpath = "//a[contains(text(),'Next')]")
-    private ButtonElement next;
+    private final String nextButton = "//a[contains(text(),'Next')]";
 
     @FindBy(xpath = "//button[contains(text(),'Close')]")
     private ButtonElement close;
@@ -19,16 +21,16 @@ public class ImagePage extends AbstractPage {
         like.click();
     }
 
-    public void clickNextImage() {
-        next.click();
+    public ButtonElement getLike() {
+        return like;
+    }
+
+    public List<WebElement> getNextImageButton() {
+        return driver.findElements(By.xpath(nextButton));
     }
 
     public void clickCloseImage() {
         close.click();
-    }
-
-    public Boolean checkNextImageButton() {
-        return next.isDisplayed();
     }
 
 }

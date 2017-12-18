@@ -14,4 +14,7 @@ public abstract class AbstractElement {
         return webElement;
     }
 
+    public String getCSSClass() {
+        return webElement.getAttribute("class");
+    }
 }

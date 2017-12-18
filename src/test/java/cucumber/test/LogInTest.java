@@ -1,3 +1,4 @@
+/*
 package cucumber.test;
 
 import bo.HomePageBO;
@@ -27,7 +28,7 @@ public class LogInTest {
         userHomePageBO = new UserHomePageBO();
     }
 
-    @Given("^user is on home page$")
+    @Given("^user is on instagram home page$")
     public void verifyHomePage() {
         Assert.assertTrue(homePageBO.getCurrentURL().equals(WEBSITE_PATH),
                 format("Expected URL: %s\nActual URL: %s", WEBSITE_PATH, homePageBO.getCurrentURL()));
@@ -56,7 +57,7 @@ public class LogInTest {
         loginPageBO.waitForUrl(INSTAGRAM_REACTIVATED);
     }
 
-    @And("^user reloads page$")
+    @And("^user reloads page for avoiding 'download app for mobile' page$")
     public void reloadPage() {
         loginPageBO.loadPage(WEBSITE_PATH);
     }
@@ -68,3 +69,4 @@ public class LogInTest {
     }
 
 }
+*/

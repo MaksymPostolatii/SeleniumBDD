@@ -15,4 +15,13 @@ public class ButtonElement extends AbstractElement {
     public boolean isDisplayed() {
         return webElement.isDisplayed();
     }
+
+    public boolean isEnabled() {
+        return webElement.isEnabled();
+    }
+
+    @Override
+    public String getCSSClass() {
+        return super.getCSSClass();
+    }
 }

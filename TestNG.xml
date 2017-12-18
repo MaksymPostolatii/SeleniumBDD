@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Full suite" parallel="methods" thread-count="2">
+    <test name="Feature runner">
+        <classes>
+            <class name="cucumber.test.launcher.Feature1"/>
+        </classes>
+        <!--<packages>-->
+            <!--<package name="cucumber.test.launcher.*"/>-->
+        <!--</packages>-->
+    </test>
+</suite>
+
+<!--<suite name="TestSUite" verbose="1">
+    <test name="Test">
+        <classes>
+            <class name="cucumber.test.FeatureRunner"/>
+        </classes>
+    </test>
+</suite>-->
+
+<!--<suite name="Wallet Service Suite" verbose="1">-->
+<!--<test name="WalletServiceTest">-->
+    <!--<classes>-->
+        <!--<class name="com.epam.WalletTests"/>-->
+    <!--</classes>-->
+<!--</test>-->
+<!--</suite>-->

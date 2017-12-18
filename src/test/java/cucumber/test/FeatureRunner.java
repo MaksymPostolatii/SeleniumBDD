@@ -6,8 +6,6 @@ import cucumber.api.testng.TestNGCucumberRunner;
 import driver.DriverManager;
 import org.testng.annotations.*;
 
-@CucumberOptions(features = "src/test/java/cucumber/feature/InstagramLogin.feature",
-        plugin = "json:target/cucumber.json")
 public class FeatureRunner {
 
     private TestNGCucumberRunner testNGCucumberRunner;
@@ -30,6 +28,5 @@ public class FeatureRunner {
     @AfterClass(alwaysRun = true)
     public void tearDown() {
         testNGCucumberRunner.finish();
-      //  DriverManager.removeDriver();
     }
 }

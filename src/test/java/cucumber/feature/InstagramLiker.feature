@@ -18,4 +18,4 @@ Feature: Verify program ability to set 'like' in all photos for requested user
     Then user should be logged out from the web site
     Examples:
       | login                 | password | name         | page                             |
-      | javalogging1@gmail.com | Ta123456 | zbsk.citizen | https://www.instagram.com/?hl=en |
+      | javalogging@gmail.com | Ta123456 | zbsk.citizen | https://www.instagram.com/?hl=en |
