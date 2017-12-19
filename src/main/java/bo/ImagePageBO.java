@@ -8,7 +8,7 @@ public class ImagePageBO {
     private ImagePage imagePage = new ImagePage();
 
     public void clickLike() {
-        imagePage.clickLike();
+        imagePage.getLike().click();
     }
 
     public boolean isPhotoLiked() {
@@ -24,7 +24,7 @@ public class ImagePageBO {
     }
 
     public void clickCloseImage() {
-        imagePage.clickCloseImage();
+        imagePage.getClose().click();
     }
 
 }

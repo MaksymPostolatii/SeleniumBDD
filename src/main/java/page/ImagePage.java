@@ -7,18 +7,17 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
+import static util.Constants.NEXT_IMAGE_BUTTON_LOCATOR;
+
 public class ImagePage extends AbstractPage {
 
     @FindBy(xpath = "//span[contains(@class,'Heart')]")
     private ButtonElement like;
-
-    private final String nextButton = "//a[contains(text(),'Next')]";
-
     @FindBy(xpath = "//button[contains(text(),'Close')]")
     private ButtonElement close;
 
-    public void clickLike() {
-        like.click();
+    public ButtonElement getClose() {
+        return close;
     }
 
     public ButtonElement getLike() {
@@ -26,11 +25,7 @@ public class ImagePage extends AbstractPage {
     }
 
     public List<WebElement> getNextImageButton() {
-        return driver.findElements(By.xpath(nextButton));
-    }
-
-    public void clickCloseImage() {
-        close.click();
+        return driver.findElements(By.xpath(NEXT_IMAGE_BUTTON_LOCATOR));
     }
 
 }

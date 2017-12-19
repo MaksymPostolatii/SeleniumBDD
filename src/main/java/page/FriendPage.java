@@ -9,12 +9,7 @@ public class FriendPage extends AbstractPage {
     @FindBy(xpath = "(//div/img[@srcset])[1]")
     private ButtonElement firstImage;
 
-    public void openFirstImage() {
-
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].click();", firstImage.getWebElement());
-
-        //firstImage.click();
+    public ButtonElement getFirstImage() {
+        return firstImage;
     }
-
 }

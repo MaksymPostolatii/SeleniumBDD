@@ -9,10 +9,9 @@ import java.util.List;
 
 public class ProfilePage extends AbstractPage {
 
+    private static final String REMEMBER_ME_BUTTON_LOCATOR = "//button[contains(text(), 'Remember')]";
     @FindBy(xpath = "//button[contains(text(),'Options')]")
     private ButtonElement options;
-
-    private static final String REMEMBER_ME_BUTTON_LOCATOR  = "//button[contains(text(), 'Remember')]";
 
     public void openOptions() {
         options.click();

@@ -10,6 +10,7 @@ public final class Constants {
     public static final String WEBSITE_PATH = "https://www.instagram.com/?hl=en";
     public static final String DATA_PROVIDER = "dataProvider";
     public static final String INSTAGRAM_REACTIVATED = "https://www.instagram.com/?hl=en#reactivated";
+    public static final String NEXT_IMAGE_BUTTON_LOCATOR = "//a[contains(text(),'Next')]";
 
     private Constants() {
     }

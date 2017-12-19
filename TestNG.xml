@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Full suite" parallel="methods" thread-count="2">
+<suite name="Full suite" parallel="classes" thread-count="2">
     <test name="Feature runner">
         <classes>
             <class name="cucumber.test.launcher.Feature1"/>
+            <class name="cucumber.test.launcher.Feature2"/>
         </classes>
         <!--<packages>-->
             <!--<package name="cucumber.test.launcher.*"/>-->

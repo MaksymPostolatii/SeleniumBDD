@@ -17,4 +17,8 @@ abstract class AbstractPage {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         initElements(new CustomFieldDecorator(driver), this);
     }
+
+    public WebDriver getDriver() {
+        return driver;
+    }
 }
