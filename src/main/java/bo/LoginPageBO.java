@@ -14,8 +14,9 @@ public class LoginPageBO {
         loginPage.enterPassword(password);
     }
 
-    public void clickLogIn() {
+    public void clickLogIn(String URL) {
         loginPage.clickLogIn();
+        loginPage.waitForUrl(URL);
     }
 
     public void loadPage(String URL) {

@@ -3,27 +3,7 @@
 <suite name="Full suite" parallel="classes" thread-count="2">
     <test name="Feature runner">
         <classes>
-            <class name="cucumber.test.launcher.Feature1"/>
-            <class name="cucumber.test.launcher.Feature2"/>
+            <class name="tests.suites.full.InstagramLikerTest"/>
         </classes>
-        <!--<packages>-->
-            <!--<package name="cucumber.test.launcher.*"/>-->
-        <!--</packages>-->
     </test>
 </suite>
-
-<!--<suite name="TestSUite" verbose="1">
-    <test name="Test">
-        <classes>
-            <class name="cucumber.test.FeatureRunner"/>
-        </classes>
-    </test>
-</suite>-->
-
-<!--<suite name="Wallet Service Suite" verbose="1">-->
-<!--<test name="WalletServiceTest">-->
-    <!--<classes>-->
-        <!--<class name="com.epam.WalletTests"/>-->
-    <!--</classes>-->
-<!--</test>-->
-<!--</suite>-->
