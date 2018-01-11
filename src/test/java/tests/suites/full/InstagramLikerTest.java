@@ -26,7 +26,7 @@ public class InstagramLikerTest extends BaseTest {
         //assertThat(true).isEqualTo(userHomePageBO.isProfileButtonDisplayed());
     }
 
-    public void navigateToSignInPage(String page) {
+/*    public void navigateToSignInPage(String page) {
         DriverManager.getChromeDriverThreadLocal().navigate().to(page);
     }
 
@@ -87,5 +87,5 @@ public class InstagramLikerTest extends BaseTest {
 
     public void verifyLoggedOut() {
         //Assert.assertTrue(homePageBO.isLogInButtonDisplayed());
-    }
+    }*/
 }
