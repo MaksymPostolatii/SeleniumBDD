@@ -12,9 +12,14 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 @SuppressWarnings("unchecked")
 public class FluentWaitElement {
 
-    public static void waitForUrl(WebDriver driver, String URL) {
+    public static void waitForUrlContains(WebDriver driver, String URL) {
         Wait wait = new FluentWait(driver).withTimeout(10, SECONDS).pollingEvery(3, MILLISECONDS);
         wait.until(ExpectedConditions.urlContains(URL));
+    }
+
+    public static void waitForUrl(WebDriver driver, String URL) {
+        Wait wait = new FluentWait(driver).withTimeout(10, SECONDS).pollingEvery(3, MILLISECONDS);
+        wait.until(ExpectedConditions.urlToBe(URL));
     }
 
     public static void waitClickableElement(WebElement webElement, WebDriver driver) {

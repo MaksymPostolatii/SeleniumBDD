@@ -1,6 +1,5 @@
 package bo;
 
-import org.openqa.selenium.WebDriver;
 import page.HomePage;
 
 public class HomePageBO {
@@ -8,7 +7,7 @@ public class HomePageBO {
     private HomePage homePage = new HomePage();
 
     public void clickLogInTab() {
-        homePage.getLogIn().click();
+        homePage.getLogInButton().click();
     }
 
     public String getCurrentURL() {
@@ -16,7 +15,7 @@ public class HomePageBO {
     }
 
     public Boolean isLogInButtonDisplayed() {
-        return homePage.getLogIn().isDisplayed();
+        return homePage.getLogInButton().isDisplayed();
     }
 
 }

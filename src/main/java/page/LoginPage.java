@@ -2,37 +2,32 @@ package page;
 
 import element.ButtonElement;
 import element.InputElement;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
-import util.FluentWaitElement;
-
-import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends AbstractPage {
 
     @FindBy(xpath = "//input[@name='username']")
-    private InputElement userName;
+    private InputElement userNameInputField;
     @FindBy(xpath = "//input[@name='password']")
-    private InputElement userPassword;
+    private InputElement userPasswordInputField;
     @FindBy(xpath = "//button[contains(text(),'Log in')]")
-    private ButtonElement logIn;
+    private ButtonElement logInButton;
 
-    public void enterLogin(String username) {
-        userName.sendKeys(username);
+    public InputElement getUserNameInputField() {
+        return userNameInputField;
     }
 
-    public void enterPassword(String password) {
-        userPassword.sendKeys(password);
+    public InputElement getUserPasswordInputField() {
+        return userPasswordInputField;
     }
 
-    public void clickLogIn() {
-        logIn.click();
+    public ButtonElement getLogInButton() {
+        return logInButton;
     }
 
-    public void loadPage(String URL) {
-        driver.get(URL);
-    }
-
-    public void waitForUrl(String URL) {
-        FluentWaitElement.waitForUrl(driver, URL);
+    @Override
+    public WebDriver getDriver() {
+        return super.getDriver();
     }
 }

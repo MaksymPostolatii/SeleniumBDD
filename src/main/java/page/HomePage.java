@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends AbstractPage {
     @FindBy(xpath = "//a[contains(text(),'Log in')] | //a[contains(text(),'Увійдіть')]")
-    private ButtonElement logIn;
+    private ButtonElement logInButton;
 
-    public ButtonElement getLogIn() {
-        return logIn;
+    public ButtonElement getLogInButton() {
+        return logInButton;
     }
 }

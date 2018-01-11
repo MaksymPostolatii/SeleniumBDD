@@ -8,11 +8,11 @@ public class ImagePageBO {
     private ImagePage imagePage = new ImagePage();
 
     public void clickLike() {
-        imagePage.getLike().click();
+        imagePage.getLikeButton().click();
     }
 
     public boolean isPhotoLiked() {
-        return imagePage.getLike().getCSSClass().contains("HeartFull");
+        return imagePage.getLikeButton().getCSSClass().contains("HeartFull");
     }
 
     public void clickNextImageButton() {
@@ -24,7 +24,7 @@ public class ImagePageBO {
     }
 
     public void clickCloseImage() {
-        imagePage.getClose().click();
+        imagePage.getCloseButton().click();
     }
 
 }

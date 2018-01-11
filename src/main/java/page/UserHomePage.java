@@ -2,34 +2,34 @@ package page;
 
 import element.ButtonElement;
 import element.InputElement;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
-import util.FluentWaitElement;
 
 public class UserHomePage extends AbstractPage {
 
     @FindBy(xpath = "//a[contains(text(),'Profile')]")
-    private ButtonElement profile;
+    private ButtonElement profileButton;
 
     @FindBy(xpath = "//input[@placeholder='Search']")
-    private InputElement userSearch;
+    private InputElement userSearchInputField;
 
     @FindBy(xpath = "//div/img")
     private ButtonElement userImage;
 
-    public Boolean isProfileButtonDisplayed() {
-        return profile.isDisplayed();
+    public ButtonElement getProfileButton() {
+        return profileButton;
     }
 
-    public void openProfile() {
-        profile.click();
+    public InputElement getUserSearchInputField() {
+        return userSearchInputField;
     }
 
-    public void enterUserNameForSearch(String userSearchName) {
-        userSearch.sendKeys(userSearchName);
+    public ButtonElement getUserImage() {
+        return userImage;
     }
 
-    public void openFriendPage(String urlPart) {
-        userImage.click();
-        FluentWaitElement.waitForUrl(driver, urlPart);
+    @Override
+    public WebDriver getDriver() {
+        return super.getDriver();
     }
 }

@@ -1,7 +1,6 @@
 package bo;
 
 import page.OptionsPage;
-import page.ProfilePage;
 
 public class OptionsPageBO {
 
@@ -9,7 +8,7 @@ public class OptionsPageBO {
     private ProfilePageBO profilePageBO = new ProfilePageBO();
 
     public void clickLogOut() {
-        optionsPage.clickLogOut();
+        optionsPage.getLogOutButton().click();
 
         if (profilePageBO.isRememberMeButtonPresent()) {
             profilePageBO.clickRememberMeButton();

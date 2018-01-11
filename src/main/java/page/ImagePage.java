@@ -12,16 +12,16 @@ import static util.Constants.NEXT_IMAGE_BUTTON_LOCATOR;
 public class ImagePage extends AbstractPage {
 
     @FindBy(xpath = "//span[contains(@class,'Heart')]")
-    private ButtonElement like;
+    private ButtonElement likeButton;
     @FindBy(xpath = "//button[contains(text(),'Close')]")
-    private ButtonElement close;
+    private ButtonElement closeButton;
 
-    public ButtonElement getClose() {
-        return close;
+    public ButtonElement getCloseButton() {
+        return closeButton;
     }
 
-    public ButtonElement getLike() {
-        return like;
+    public ButtonElement getLikeButton() {
+        return likeButton;
     }
 
     public List<WebElement> getNextImageButton() {

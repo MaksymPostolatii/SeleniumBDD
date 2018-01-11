@@ -7,7 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static util.Constants.*;
 
 @Test(dataProviderClass = BaseDataProvider.class)

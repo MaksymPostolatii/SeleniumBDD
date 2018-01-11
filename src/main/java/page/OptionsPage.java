@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 public class OptionsPage extends AbstractPage {
 
     @FindBy(xpath = "//button[contains(text(),'Log Out')]")
-    private ButtonElement logOut;
+    private ButtonElement logOutButton;
 
-    public void clickLogOut() {
-        logOut.click();
+    public ButtonElement getLogOutButton() {
+        return logOutButton;
     }
 }

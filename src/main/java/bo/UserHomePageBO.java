@@ -1,24 +1,26 @@
 package bo;
 
 import page.UserHomePage;
+import util.FluentWaitElement;
 
 public class UserHomePageBO {
 
     private UserHomePage userHomePage = new UserHomePage();
 
     public Boolean isProfileButtonDisplayed() {
-        return userHomePage.isProfileButtonDisplayed();
+        return userHomePage.getProfileButton().isDisplayed();
     }
 
     public void openProfile() {
-        userHomePage.openProfile();
+        userHomePage.getProfileButton().click();
     }
 
     public void enterUserNameForSearch(String userSearchName) {
-        userHomePage.enterUserNameForSearch(userSearchName);
+        userHomePage.getUserSearchInputField().sendKeys(userSearchName);
     }
 
-    public void openFriendPage(String urlPart) {
-        userHomePage.openFriendPage(urlPart);
+    public void openFriendPage(String partOfUrl) {
+        userHomePage.getUserImage().click();
+        FluentWaitElement.waitForUrlContains(userHomePage.getDriver(), partOfUrl);
     }
 }

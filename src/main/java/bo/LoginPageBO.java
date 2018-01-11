@@ -1,29 +1,30 @@
 package bo;
 
 import page.LoginPage;
+import util.FluentWaitElement;
 
 public class LoginPageBO {
 
     private LoginPage loginPage = new LoginPage();
 
     public void fillUsername(String username) {
-        loginPage.enterLogin(username);
+        loginPage.getUserNameInputField().sendKeys(username);
     }
 
     public void fillPassword(String password) {
-        loginPage.enterPassword(password);
+        loginPage.getUserPasswordInputField().sendKeys(password);
     }
 
     public void clickLogIn(String URL) {
-        loginPage.clickLogIn();
-        loginPage.waitForUrl(URL);
+        loginPage.getLogInButton().click();
+        FluentWaitElement.waitForUrl(loginPage.getDriver(), URL);
     }
 
     public void loadPage(String URL) {
-        loginPage.loadPage(URL);
+        loginPage.getDriver().get(URL);
     }
 
     public void waitForUrl(String URL) {
-        loginPage.waitForUrl(URL);
+        FluentWaitElement.waitForUrl(loginPage.getDriver(), URL);
     }
 }
